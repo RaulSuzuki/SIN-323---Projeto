@@ -1,0 +1,9 @@
+pandas
+numpy
+pyarrow
+matplotlib
+scikit-learn
+# usados nas próximas etapas:
+ streamlit
+ plotly
+ torch
