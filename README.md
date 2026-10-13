@@ -11,38 +11,6 @@ conda activate sin323
 pip install -r requirements.txt
 ```
 
-Download `MetroPT3(AirCompressor).csv` from the [UCI repository](https://archive.ics.uci.edu/dataset/791/metropt+3+dataset) (or Kaggle, same file) and place it in `data/`. The CSV and the generated Parquet files are not in the repository.
-
-### Order of the scripts
-
-Run from the repository root. On a machine without a display, set `MPLBACKEND=Agg` first (`eda_plots.py` calls `plt.show()`).
-
-Main pipeline (component alerts):
-
-```bash
-python scripts/prepare_data.py          # CSV -> Parquet, gap report
-python scripts/clean_data.py            # cleaned 10 s grid, frozen-logger and gap flags
-python scripts/episodes.py              # continuous-load episodes
-python scripts/run_alerts.py            # component scores and the three alert levels
-python scripts/plot_alerts.py           # alert timeline figure
-python scripts/unlabelled_episodes.py   # compare unlabelled episodes with the labelled failures
-python scripts/evaluate_intervals.py    # interval evaluation (overlap, false positives, 2 h lead)
-```
-
-Optional (exploration and the first, negative approach):
-
-```bash
-python scripts/eda_plots.py             # EDA figures 01-03 (after prepare_data)
-python scripts/train.py                 # supervised 24 h prediction, leave-one-failure-out
-python scripts/evaluate.py              # PR curve, per-failure probability, confusion matrix (after train)
-python scripts/run_simulation.py        # risk timelines of the first approach (after train)
-python scripts/leak_proxy.py            # leak proxies per episode
-python scripts/leak_proxy_demanda.py    # same, controlled for demand
-python scripts/anomaly_eval.py          # cycle-level isolation forest
-```
-
-`leak_proxy*.py` and `anomaly_eval.py` read `reports/resultados/ciclos.parquet`, which no script in this repository currently generates (see `src/ciclos.py`); they only work if that file exists.
-
 ## 1. Purpose
 
 A metro operator relies on an air compressor (the pneumatic unit that feeds the braking and door systems of the trains). When it fails, trains are taken out of service and maintenance is done reactively. The operator wants to know **hours before a failure that the compressor is likely to break**, so maintenance can be scheduled in advance.
@@ -194,14 +162,37 @@ models/            saved model
 
 ## 8. How to run
 
+Create the environment first (section 0). Download `MetroPT3(AirCompressor).csv` from the [UCI repository](https://archive.ics.uci.edu/dataset/791/metropt+3+dataset) (or Kaggle, same file) and place it in `data/`. The CSV and the generated Parquet files are not in the repository.
+
+Run from the repository root. On a machine without a display, set `MPLBACKEND=Agg` first (`eda_plots.py` calls `plt.show()`).
+
+### Order of the scripts
+
+Main pipeline (component alerts):
+
 ```bash
-pip install -r requirements.txt
-python scripts/prepare_data.py     # CSV -> Parquet, gap report
-python scripts/eda_plots.py        # EDA figures
-python scripts/train.py            # validation + final model
-python scripts/evaluate.py         # PR curve, per-failure probability, confusion matrix
-python scripts/run_simulation.py   # scenario timelines
+python scripts/prepare_data.py          # CSV -> Parquet, gap report
+python scripts/clean_data.py            # cleaned 10 s grid, frozen-logger and gap flags
+python scripts/episodes.py              # continuous-load episodes
+python scripts/run_alerts.py            # component scores and the three alert levels
+python scripts/plot_alerts.py           # alert timeline figure
+python scripts/unlabelled_episodes.py   # compare unlabelled episodes with the labelled failures
+python scripts/evaluate_intervals.py    # interval evaluation (overlap, false positives, 2 h lead)
 ```
+
+Optional (exploration and the first, negative approach):
+
+```bash
+python scripts/eda_plots.py             # EDA figures 01-03 (after prepare_data)
+python scripts/train.py                 # supervised 24 h prediction, leave-one-failure-out
+python scripts/evaluate.py              # PR curve, per-failure probability, confusion matrix (after train)
+python scripts/run_simulation.py        # risk timelines of the first approach (after train)
+python scripts/leak_proxy.py            # leak proxies per episode
+python scripts/leak_proxy_demanda.py    # same, controlled for demand
+python scripts/anomaly_eval.py          # cycle-level isolation forest
+```
+
+`leak_proxy*.py` and `anomaly_eval.py` read `reports/resultados/ciclos.parquet`, which no script in this repository currently generates (see `src/ciclos.py`); they only work if that file exists.
 
 ## 9. References
 
