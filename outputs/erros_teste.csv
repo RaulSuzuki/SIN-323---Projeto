@@ -1,0 +1,32 @@
+id,real,previsto,tipo,incerteza,recusada,sev_real
+171,Ferrugem+Cercosporiose,Ferrugem,faltou cercospora,0.229,0,1
+523,Mancha de Phoma,Bicho-mineiro+Mancha de Phoma,a mais miner,0.957,1,2
+536,Mancha de Phoma+Cercosporiose,Bicho-mineiro,"faltou phoma,cercospora | a mais miner",0.497,0,3
+558,Ferrugem,Bicho-mineiro+Ferrugem+Cercosporiose,"a mais miner,cercospora",0.889,1,1
+617,Bicho-mineiro+Mancha de Phoma,Bicho-mineiro,faltou phoma,0.075,0,1
+651,Mancha de Phoma,Bicho-mineiro+Mancha de Phoma,a mais miner,0.872,1,1
+652,Mancha de Phoma+Cercosporiose,Cercosporiose,faltou phoma,0.386,0,1
+1005,Bicho-mineiro,Bicho-mineiro+Cercosporiose,a mais cercospora,0.667,1,1
+1013,Bicho-mineiro+Cercosporiose,Bicho-mineiro+Mancha de Phoma+Cercosporiose,a mais phoma,0.917,1,1
+1022,Ferrugem,Bicho-mineiro+Ferrugem,a mais miner,0.251,0,1
+1158,Bicho-mineiro+Cercosporiose,Cercosporiose,faltou miner,0.47,0,1
+1182,Bicho-mineiro,Bicho-mineiro+Cercosporiose,a mais cercospora,0.252,0,1
+1222,Bicho-mineiro,Bicho-mineiro+Cercosporiose,a mais cercospora,0.119,0,1
+1225,Bicho-mineiro+Ferrugem,Bicho-mineiro+Cercosporiose,faltou rust | a mais cercospora,0.807,1,1
+1272,Ferrugem,Bicho-mineiro+Ferrugem,a mais miner,0.566,1,1
+1276,Bicho-mineiro+Ferrugem,Bicho-mineiro+Ferrugem+Cercosporiose,a mais cercospora,0.728,1,4
+1309,Ferrugem+Cercosporiose,Ferrugem,faltou cercospora,0.664,1,2
+1314,Ferrugem,Bicho-mineiro+Ferrugem,a mais miner,0.777,1,2
+1320,Bicho-mineiro+Ferrugem,Ferrugem+Cercosporiose,faltou miner | a mais cercospora,0.659,1,4
+1342,Ferrugem,Bicho-mineiro+Ferrugem,a mais miner,0.432,0,4
+1407,Bicho-mineiro+Ferrugem,Ferrugem,faltou miner,0.345,0,1
+1416,Ferrugem+Cercosporiose,Bicho-mineiro+Ferrugem+Cercosporiose,a mais miner,0.97,1,1
+1456,Bicho-mineiro+Ferrugem,Ferrugem+Cercosporiose,faltou miner | a mais cercospora,0.618,1,2
+1488,Bicho-mineiro+Ferrugem,Ferrugem+Cercosporiose,faltou miner | a mais cercospora,0.537,0,1
+1534,Bicho-mineiro+Ferrugem,Ferrugem,faltou miner,0.56,1,2
+1548,Ferrugem,Ferrugem+Cercosporiose,a mais cercospora,0.693,1,1
+1549,Cercosporiose,Ferrugem+Cercosporiose,a mais rust,0.564,1,1
+1561,Ferrugem,Ferrugem+Cercosporiose,a mais cercospora,0.891,1,3
+1632,Bicho-mineiro+Ferrugem,Bicho-mineiro+Ferrugem+Cercosporiose,a mais cercospora,0.977,1,2
+1699,Ferrugem,Ferrugem+Cercosporiose,a mais cercospora,0.815,1,1
+1736,Mancha de Phoma,Cercosporiose,faltou phoma | a mais cercospora,0.11,0,1

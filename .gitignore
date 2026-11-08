@@ -1,0 +1,15 @@
+# Pesos do modelo (107 MB, acima do limite de 100 MB do GitHub): distribuir por Release ou Git LFS
+*.pt
+
+# Dados: o BRACOL deve ser baixado da fonte; os caches sao gerados por preparar_dados.py
+data/bracol_raw/
+data/cache_*/
+
+# Experimentos arquivados (3,7 GB)
+old/
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.claude/

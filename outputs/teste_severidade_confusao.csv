@@ -1,0 +1,6 @@
+,prev_Saudavel,prev_Muito baixa,prev_Baixa,prev_Alta,prev_Muito alta
+real_Saudavel,21,0,0,0,0
+real_Muito baixa,0,111,9,0,0
+real_Baixa,0,11,23,7,0
+real_Alta,0,0,3,9,2
+real_Muito alta,0,0,0,2,3

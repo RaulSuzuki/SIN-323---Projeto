@@ -1,0 +1,23 @@
+dispositivo: cuda NVIDIA GeForce RTX 4050 Laptop GPU
+ep 01 perda 1.691 | val mAP 0.782 sev 0.495 | 134s
+ep 02 perda 1.054 | val mAP 0.924 sev 0.835 | 36s
+ep 03 perda 0.743 | val mAP 0.937 sev 0.810 | 33s
+ep 04 perda 0.629 | val mAP 0.942 sev 0.800 | 41s
+ep 05 perda 0.568 | val mAP 0.942 sev 0.690 | 46s
+ep 06 perda 0.524 | val mAP 0.940 sev 0.840 | 40s
+ep 07 perda 0.427 | val mAP 0.943 sev 0.840 | 32s
+ep 08 perda 0.367 | val mAP 0.951 sev 0.855 | 51s
+ep 09 perda 0.356 | val mAP 0.944 sev 0.835 | 56s
+ep 10 perda 0.303 | val mAP 0.951 sev 0.860 | 50s
+ep 11 perda 0.271 | val mAP 0.942 sev 0.860 | 53s
+ep 12 perda 0.217 | val mAP 0.957 sev 0.845 | 57s
+ep 13 perda 0.186 | val mAP 0.952 sev 0.855 | 54s
+ep 14 perda 0.152 | val mAP 0.948 sev 0.860 | 55s
+ep 15 perda 0.119 | val mAP 0.952 sev 0.865 | 56s
+ep 16 perda 0.095 | val mAP 0.946 sev 0.855 | 56s
+ep 17 perda 0.094 | val mAP 0.949 sev 0.875 | 61s
+ep 18 perda 0.076 | val mAP 0.948 sev 0.865 | 54s
+ep 19 perda 0.068 | val mAP 0.950 sev 0.890 | 52s
+ep 20 perda 0.066 | val mAP 0.949 sev 0.880 | 54s
+parada antecipada
+melhor val mAP: 0.957

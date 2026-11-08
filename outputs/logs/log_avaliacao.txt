@@ -1,0 +1,77 @@
+         doenca  n_positivos_teste  precisao  recall    F1    AP   AUC
+  Bicho-mineiro                 49     0.827   0.878 0.851 0.934 0.965
+       Ferrugem                 86     0.988   0.988 0.988 1.000 1.000
+Mancha de Phoma                 51     0.979   0.922 0.949 0.990 0.996
+  Cercosporiose                 44     0.745   0.932 0.828 0.875 0.973
+{
+  "temperatura_doenca": 1.0965173244476318,
+  "temperatura_severidade": 1.1975711584091187,
+  "limiares": {
+    "miner": 0.35,
+    "rust": 0.7000000000000001,
+    "phoma": 0.325,
+    "cercospora": 0.475
+  },
+  "ECE_teste_sem_calibrar": 0.019031662851877844,
+  "ECE_teste_calibrado": 0.02144975639156886,
+  "mAP": 0.9497523589100381,
+  "F1_macro": 0.9044087548289712,
+  "exact_match": 0.845771144278607,
+  "hamming_acc": 0.9514925373134329,
+  "saudavel_recall": 1.0,
+  "saudavel_precisao": 1.0,
+  "n_teste": 201,
+  "n_teste_multidoenca": 49,
+  "exact_match_so_multidoenca": 0.673469387755102,
+  "confusoes_mais_comuns(real->previsto a mais)": [
+    {
+      "real": "Ferrugem",
+      "previsto": "Bicho-mineiro",
+      "n": 5
+    },
+    {
+      "real": "Ferrugem",
+      "previsto": "Cercosporiose",
+      "n": 4
+    },
+    {
+      "real": "Bicho-mineiro",
+      "previsto": "Cercosporiose",
+      "n": 3
+    },
+    {
+      "real": "Mancha de Phoma",
+      "previsto": "Bicho-mineiro",
+      "n": 2
+    },
+    {
+      "real": "Cercosporiose",
+      "previsto": "Ferrugem",
+      "n": 1
+    },
+    {
+      "real": "Mancha de Phoma",
+      "previsto": "Cercosporiose",
+      "n": 1
+    }
+  ],
+  "severidade": {
+    "acuracia": 0.8308457711442786,
+    "MAE_niveis": 0.1691542288557214,
+    "dentro_de_1_nivel": 1.0,
+    "kappa_quadratico": 0.8848448084116873,
+    "baseline_classe_majoritaria": 0.5970149253731343
+  },
+  "recusa_tau": 0.5419694900512696,
+  "recusa_no_teste": {
+    "cobertura": 0.7761194029850746,
+    "exact_match_aceitas": 0.9230769230769231,
+    "exact_match_recusadas": 0.5777777777777777
+  },
+  "gradcam_proxy_fundo": {
+    "n": 216,
+    "massa_media_na_folha": 0.74600114038697,
+    "area_media_da_folha": 0.32614397119592736,
+    "razao_massa_sobre_area": 2.3562728122008907
+  }
+}
